@@ -1,0 +1,14 @@
+NAME: При поиске фильма по запросу {TEST DATA[0]} в результатах отображается текст {TEST DATA[1]}
+TEST DATA: [
+        [green / The Green Knight],
+        [drama / The Dramatics: A Comedy]
+      ]
+PRIORITY: CRITICAL
+PRECONDITIONS:
+  - Открыт браузер
+  - Находимся на стартовой стр. https://www.film.ru
+STEPS:
+    - В поле поиска ввести текст {TEST DATA[0]}
+    - Нажать Enter
+EXPECTED RESULT:
+    - В результатах отображается фильм с названием {TEST DATA[1]}
